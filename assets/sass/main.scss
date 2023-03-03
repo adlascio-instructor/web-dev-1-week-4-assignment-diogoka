@@ -9,6 +9,10 @@ $background:#191816;
 $form-background:#24221f;
 $primary-color:#ffc632;
 
+*:focus {
+    outline: none;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -17,7 +21,12 @@ body{
     width: 375px;
     font-family: $poppins-font;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 19% 25% 100%;
+    span{
+        font-family: $poppins-font;
+        color: $primary-color;
+    }
 }
 
 .logo{
@@ -53,4 +62,121 @@ body{
         color: $text-base;
         font-weight: 400;
     }
+}
+
+.form{
+    
+    form{
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+            padding-left: 6%;
+            padding-right: 6%;
+        }   
+    }
+    .signUp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    label{
+        color: $text-base;
+        margin-bottom: 1%;
+    }
+    input{
+        background-color: $background;
+        border: none;
+    }
+}
+
+input:focus{
+    outline-color: none;
+    
+}
+
+input[type="email"]{
+    width: 96%;
+}
+
+.email{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 6% 94%;
+    border: 1px solid $text-base;
+    align-items: center;
+    gap: 1%;
+    padding: 3%;
+    border-radius: 6px;
+}
+
+.password{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 6% 82% 10%;
+    border: 1px solid $text-base;
+    align-items: center;
+    gap: 1%;
+    padding: 3%;
+    border-radius: 6px;
+}
+
+.forgotPassword{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin: {
+    top: 1.2rem;
+    bottom: 1.2rem;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.revealPassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.btnSubmit{
+    color: $background;
+    background-color: $primary-color;
+    border-radius: 6px;
+    width: 100%;
+    padding: 4%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.labelPassword{
+    margin-top: 1.2rem;
+
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6%;
+    span{
+        font-weight: 300;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 600;
+    }
+
 }

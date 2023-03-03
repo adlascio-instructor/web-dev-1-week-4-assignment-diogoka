@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/sass/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -19,10 +20,39 @@
         <span>Login</span>
       </div>
       <div class="loginText">
-        <span>Insert tour information <strong>below</strong>.</span>
+        <span>Insert your information <strong>below</strong>.</span>
       </div>
     </main>
     <div class="form">
+      <form action="#">
+        <fieldset>
+          <label for="email">E-mail</label>
+          <div class="email">
+            <img src="./assets/images/mail.svg" alt="mail">
+            <input type="email" placeholder="Type your email">
+          </div>
+          <label class="labelPassword" for="password">Password</label>
+          <div class="password">
+            <img src="./assets/images/lock.svg" alt="lock">
+            <input type="password" placeholder="Type your password">
+            <button class="revealPassword"><img src="./assets/images/eye.svg" alt=""></button>
+          </div>
+          <div class="forgotPassword">
+            <div class="checkbox">
+              <input type="checkbox">
+              <label for="checkbox">Remind me</label>
+            </div>
+            <span> <a href="#">Forgot my password</a></span>
+          </div>
+          <button class="btnSubmit" type="submit">Login</button>
+        </fieldset>
+        <div class="signUp">
+          <span>Don't have an account? <a href="#">Sign Up!</a> </span>
+        </div>
+
+
+      </form>
+
 
     </div>
 
