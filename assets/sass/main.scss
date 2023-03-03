@@ -229,14 +229,11 @@ input[type="email"]{
     }
 
     .background{
-        display: block;
+        display: inline-block;
         overflow: hidden;
         grid-row: span 3;       
         img{
-            width: 100%;
-            
-            
-            
+            width: 100%;            
         }
     
         
