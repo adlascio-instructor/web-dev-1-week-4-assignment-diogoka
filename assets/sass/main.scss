@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+$poppins-font: 'Poppins', 'sans-serif';
+$roboto-font: 'Roboto', 'sans-serif';
+$text-base:#afb6c2;
+$text-title:#d4ccb6;
+$background:#191816;
+$form-background:#24221f;
+$primary-color:#ffc632;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background-color: $background;
+    width: 375px;
+    font-family: $poppins-font;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.logo{
+    padding: {
+        left: 1.5rem;
+        top: 2.5rem;
+    };
+    img{
+        width: 10rem;
+    }
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    gap: 2%;
+    img{
+        padding-left: 1.5rem;
+        width: 2rem;
+
+    }
+    span{
+        color: $text-title;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+.loginText{
+    margin-left: 1.5rem;
+    span{
+        color: $text-base;
+        font-weight: 400;
+    }
+}
