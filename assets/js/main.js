@@ -25,7 +25,6 @@ inputPassword.addEventListener("focusout", () =>{
 
 revealPassword.addEventListener("click", () => {
     const inputPassword = document.querySelector('#password');
-    
     if(inputPassword.type === "password"){
         inputPassword.type = "text";
     } else {
