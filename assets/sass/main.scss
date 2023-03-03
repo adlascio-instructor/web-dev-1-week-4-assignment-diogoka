@@ -90,12 +90,14 @@ body{
     }
     input{
         background-color: $background;
+        color: $text-base;
         border: none;
     }
 }
 
 input:focus{
     outline-color: none;
+    color: $text-base;
     
 }
 
@@ -168,6 +170,12 @@ input[type="email"]{
     font-weight: 600;
     font-size: 1rem;
 }
+
+.btnSubmit:hover{
+    opacity: 77%;
+}
+
+
 
 .labelPassword{
     margin-top: 1.2rem;

@@ -25,17 +25,17 @@
       </div>
     </main>
     <div class="form">
-      <form action="#">
+      <form action="#" autocomplete="off" method="POST">
         <fieldset>
           <label for="email">E-mail</label>
           <div class="email">
-            <img src="./assets/images/mail.svg" alt="mail">
-            <input type="email" placeholder="Type your email">
+            <img id="emailIcon" src="./assets/images/mail.svg" alt="mail">
+            <input id="email" type="email" placeholder="Type your email">
           </div>
           <label class="labelPassword" for="password">Password</label>
           <div class="password">
-            <img src="./assets/images/lock.svg" alt="lock">
-            <input type="password" placeholder="Type your password">
+            <img id="passwordIcon" src="./assets/images/lock.svg" alt="lock">
+            <input id="password" type="password" placeholder="Type your password">
             <button class="revealPassword"><img src="./assets/images/eye.svg" alt=""></button>
           </div>
           <div class="forgotPassword">
@@ -56,4 +56,5 @@
       <img src="./assets/images/side-image-2x.jpg" alt="background">
     </div>
   </body>
+  <script src="./assets/js/main.js"></script>
 </html>

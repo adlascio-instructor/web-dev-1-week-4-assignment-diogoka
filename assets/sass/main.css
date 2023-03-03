@@ -74,11 +74,13 @@ body span {
 }
 .form input {
   background-color: #191816;
+  color: #afb6c2;
   border: none;
 }
 
 input:focus {
   outline-color: none;
+  color: #afb6c2;
 }
 
 input[type=email] {
@@ -146,6 +148,10 @@ input[type=email] {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1rem;
+}
+
+.btnSubmit:hover {
+  opacity: 77%;
 }
 
 .labelPassword {
