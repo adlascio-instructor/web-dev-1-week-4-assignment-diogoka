@@ -19,6 +19,10 @@ body span {
   color: #ffc632;
 }
 
+.background {
+  display: none;
+}
+
 .logo {
   padding-left: 1.5rem;
   padding-top: 2.5rem;
@@ -114,6 +118,9 @@ input[type=email] {
   text-decoration: none;
   color: #ffc632;
 }
+.forgotPassword input[type=checkbox] {
+  accent-color: #ffc632;
+}
 
 .checkbox {
   display: flex;
@@ -133,6 +140,7 @@ input[type=email] {
   color: #191816;
   background-color: #ffc632;
   border-radius: 6px;
+  border-width: 0;
   width: 100%;
   padding: 4%;
   text-transform: uppercase;
@@ -157,4 +165,51 @@ input[type=email] {
   text-decoration: none;
   color: #ffc632;
   font-weight: 600;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 12% 1fr;
+    grid-template-areas: "logo backgroundR" "info backgroundR" "form backgroundR";
+  }
+  main {
+    background-color: #24221f;
+    grid-area: info;
+    width: 61%;
+    margin-left: 18%;
+    padding-top: 2%;
+  }
+  main .login {
+    padding-left: 13%;
+  }
+  main .loginText {
+    padding-left: 13%;
+  }
+  .form {
+    grid-area: form;
+    width: 45%;
+    margin-left: 18%;
+    /* top | right | bottom | left */
+    padding: 3% 8% 8% 8%;
+  }
+  .background {
+    display: block;
+    overflow: hidden;
+    grid-row: span 3;
+  }
+  .background img {
+    width: 100%;
+  }
+  .form {
+    background-color: #24221f;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .form input {
+    background-color: #24221f;
+  }
 }/*# sourceMappingURL=main.css.map */

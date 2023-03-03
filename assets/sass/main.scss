@@ -29,6 +29,10 @@ body{
     }
 }
 
+.background{
+    display: none;
+}
+
 .logo{
     padding: {
         left: 1.5rem;
@@ -133,6 +137,10 @@ input[type="email"]{
         text-decoration: none;
         color: $primary-color;
     }
+
+    input[type="checkbox"]{
+        accent-color: $primary-color;
+    }
 }
 
 .checkbox{
@@ -153,6 +161,7 @@ input[type="email"]{
     color: $background;
     background-color: $primary-color;
     border-radius: 6px;
+    border-width: 0;
     width: 100%;
     padding: 4%;
     text-transform: uppercase;
@@ -179,4 +188,67 @@ input[type="email"]{
         font-weight: 600;
     }
 
+}
+
+@media only screen and (min-width: 376px) {
+    body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 12% 1fr;
+            grid-template-areas:    "logo backgroundR"
+                                    "info backgroundR"
+                                    "form backgroundR";    
+    }
+
+    main{
+        background-color: $form-background;
+        grid-area: info;
+        width: 61%;
+        margin-left: 18%;
+        padding-top: 2%;
+        
+
+        .login{
+            padding-left: 13%;
+
+        }
+        .loginText{
+            padding-left: 13%;
+        }
+        
+    }
+
+    .form{
+        grid-area: form;
+        width: 45%;
+        margin-left: 18%;
+        /* top | right | bottom | left */
+        padding: 3% 8% 8% 8%;
+    }
+
+    .background{
+        display: block;
+        overflow: hidden;
+        grid-row: span 3;       
+        img{
+            width: 100%;
+            
+            
+            
+        }
+    
+        
+    }
+    
+
+    .form{
+        background-color: $form-background;
+        height: fit-content;
+
+        input{
+            background-color: $form-background;
+        }
+    }
 }
