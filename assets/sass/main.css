@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background-color: #191816;
+  width: 375px;
+  font-family: "Poppins", "sans-serif";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 19% 25% 100%;
+}
+body span {
+  font-family: "Poppins", "sans-serif";
+  color: #ffc632;
+}
+
+.background {
+  display: none;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  padding-top: 2.5rem;
+}
+.logo img {
+  width: 10rem;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  gap: 2%;
+}
+.login img {
+  padding-left: 1.5rem;
+  width: 2rem;
+}
+.login span {
+  color: #d4ccb6;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.loginText {
+  margin-left: 1.5rem;
+}
+.loginText span {
+  color: #afb6c2;
+  font-weight: 400;
+}
+
+.form form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+.form .signUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form label {
+  color: #afb6c2;
+  margin-bottom: 1%;
+}
+.form input {
+  background-color: #191816;
+  color: #afb6c2;
+  border: none;
+}
+
+input:focus {
+  outline-color: none;
+  color: #afb6c2;
+}
+
+input[type=email] {
+  width: 96%;
+}
+
+.email {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 6% 94%;
+  border: 1px solid #afb6c2;
+  align-items: center;
+  gap: 1%;
+  padding: 3%;
+  border-radius: 6px;
+}
+
+.password {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 6% 82% 10%;
+  border: 1px solid #afb6c2;
+  align-items: center;
+  gap: 1%;
+  padding: 3%;
+  border-radius: 6px;
+}
+
+.forgotPassword {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.forgotPassword a {
+  text-decoration: none;
+  color: #ffc632;
+}
+.forgotPassword input[type=checkbox] {
+  accent-color: #ffc632;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.revealPassword {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.btnSubmit {
+  color: #191816;
+  background-color: #ffc632;
+  border-radius: 6px;
+  border-width: 0;
+  width: 100%;
+  padding: 4%;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btnSubmit:hover {
+  opacity: 77%;
+}
+
+.labelPassword {
+  margin-top: 1.2rem;
+}
+
+.signUp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6%;
+}
+.signUp span {
+  font-weight: 300;
+}
+.signUp a {
+  text-decoration: none;
+  color: #ffc632;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 12% 1fr;
+    grid-template-areas: "logo backgroundR" "info backgroundR" "form backgroundR";
+  }
+  main {
+    background-color: #24221f;
+    grid-area: info;
+    width: 61%;
+    margin-left: 18%;
+    padding-top: 2%;
+  }
+  main .login {
+    padding-left: 13%;
+  }
+  main .loginText {
+    padding-left: 13%;
+  }
+  .form {
+    grid-area: form;
+    width: 45%;
+    margin-left: 18%;
+    /* top | right | bottom | left */
+    padding: 3% 8% 8% 8%;
+  }
+  .background {
+    display: inline-block;
+    overflow: hidden;
+    grid-row: span 3;
+  }
+  .background img {
+    width: 100%;
+  }
+  .form {
+    background-color: #24221f;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .form input {
+    background-color: #24221f;
+  }
+}/*# sourceMappingURL=main.css.map */

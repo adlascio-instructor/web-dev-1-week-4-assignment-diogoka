@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+$poppins-font: 'Poppins', 'sans-serif';
+$roboto-font: 'Roboto', 'sans-serif';
+$text-base:#afb6c2;
+$text-title:#d4ccb6;
+$background:#191816;
+$form-background:#24221f;
+$primary-color:#ffc632;
+
+*:focus {
+    outline: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background-color: $background;
+    width: 375px;
+    font-family: $poppins-font;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 19% 25% 100%;
+    span{
+        font-family: $poppins-font;
+        color: $primary-color;
+    }
+}
+
+.background{
+    display: none;
+}
+
+.logo{
+    padding: {
+        left: 1.5rem;
+        top: 2.5rem;
+    };
+    img{
+        width: 10rem;
+    }
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    gap: 2%;
+    img{
+        padding-left: 1.5rem;
+        width: 2rem;
+
+    }
+    span{
+        color: $text-title;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+.loginText{
+    margin-left: 1.5rem;
+    span{
+        color: $text-base;
+        font-weight: 400;
+    }
+}
+
+.form{
+    
+    form{
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+            padding-left: 6%;
+            padding-right: 6%;
+        }   
+    }
+    .signUp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    label{
+        color: $text-base;
+        margin-bottom: 1%;
+    }
+    input{
+        background-color: $background;
+        color: $text-base;
+        border: none;
+    }
+}
+
+input:focus{
+    outline-color: none;
+    color: $text-base;
+    
+}
+
+input[type="email"]{
+    width: 96%;
+}
+
+.email{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 6% 94%;
+    border: 1px solid $text-base;
+    align-items: center;
+    gap: 1%;
+    padding: 3%;
+    border-radius: 6px;
+}
+
+.password{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 6% 82% 10%;
+    border: 1px solid $text-base;
+    align-items: center;
+    gap: 1%;
+    padding: 3%;
+    border-radius: 6px;
+}
+
+.forgotPassword{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin: {
+    top: 1.2rem;
+    bottom: 1.2rem;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+    }
+
+    input[type="checkbox"]{
+        accent-color: $primary-color;
+    }
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.revealPassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.btnSubmit{
+    color: $background;
+    background-color: $primary-color;
+    border-radius: 6px;
+    border-width: 0;
+    width: 100%;
+    padding: 4%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btnSubmit:hover{
+    opacity: 77%;
+}
+
+
+
+.labelPassword{
+    margin-top: 1.2rem;
+
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6%;
+    span{
+        font-weight: 300;
+    }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 600;
+    }
+
+}
+
+@media only screen and (min-width: 376px) {
+    body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 25% 12% 1fr;
+            grid-template-areas:    "logo backgroundR"
+                                    "info backgroundR"
+                                    "form backgroundR";    
+    }
+
+    main{
+        background-color: $form-background;
+        grid-area: info;
+        width: 61%;
+        margin-left: 18%;
+        padding-top: 2%;
+        
+
+        .login{
+            padding-left: 13%;
+
+        }
+        .loginText{
+            padding-left: 13%;
+        }
+        
+    }
+
+    .form{
+        grid-area: form;
+        width: 45%;
+        margin-left: 18%;
+        /* top | right | bottom | left */
+        padding: 3% 8% 8% 8%;
+    }
+
+    .background{
+        display: inline-block;
+        overflow: hidden;
+        grid-row: span 3;       
+        img{
+            width: 100%;            
+        }
+    
+        
+    }
+    
+
+    .form{
+        background-color: $form-background;
+        height: fit-content;
+
+        input{
+            background-color: $form-background;
+        }
+    }
+}
