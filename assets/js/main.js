@@ -36,7 +36,6 @@ revealPassword.addEventListener("click", () => {
 
 const validatePassword = (input) => {
     const validation = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
-
     if(input.match(validation)){
         document.querySelector(".password").style.border = "1px solid #afb6c2";
         document.querySelector("#passwordIcon").src="./assets/images/lock.svg";
@@ -44,7 +43,7 @@ const validatePassword = (input) => {
         alert("The password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters")
         document.querySelector(".password").style.border = "1px solid #afb6c2";
         document.querySelector("#passwordIcon").src="./assets/images/lock.svg";
-        return inputPassword.focusin();
+        // inputPassword.focusin();
     }
 }
 
