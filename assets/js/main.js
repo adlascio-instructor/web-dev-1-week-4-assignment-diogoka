@@ -2,27 +2,34 @@ const inputEmail = document.querySelector('#email');
 const inputPassword = document.querySelector('#password');
 const revealPassword = document.querySelector('.revealPassword');
 
+const changeBorder = (element, newBorder) => {
+    element.style.border = newBorder
+}
+
+const changeSource = (element, newSource) => {
+    element.src=newSource
+}
 
 inputEmail.addEventListener("focusin", () =>{
-    document.querySelector(".email").style.border = "1px solid #ffc632";
-    document.querySelector("#emailIcon").src="./assets/images/mail-focus.svg";
+    changeSource(document.querySelector("#emailIcon"),"./assets/images/mail-focus.svg")
+    changeBorder(document.querySelector(".email"), "1px solid #ffc632");
 })
 
 inputEmail.addEventListener("focusout", () =>{
-    document.querySelector(".email").style.border = "1px solid #afb6c2";
-    document.querySelector("#emailIcon").src="./assets/images/mail.svg";
+    changeBorder(document.querySelector(".email"),"1px solid #afb6c2");
+    changeSource(document.querySelector("#emailIcon"),"./assets/images/mail.svg")
 })
 
 inputPassword.addEventListener("focusin", () =>{
-    document.querySelector(".password").style.border = "1px solid #ffc632";
-    document.querySelector("#passwordIcon").src="./assets/images/lock-focus.svg";
+    changeBorder(document.querySelector(".password"),"1px solid #ffc632")
+    changeSource(document.querySelector("#passwordIcon"),"./assets/images/lock-focus.svg")
 })
 
 inputPassword.addEventListener("focusout", () =>{
     const pw = inputPassword.value;
-    validatePassword(pw);
-    
+    validatePassword(pw);  
 })
+
 
 revealPassword.addEventListener("click", () => {
     const inputPassword = document.querySelector('#password');
@@ -37,13 +44,12 @@ revealPassword.addEventListener("click", () => {
 const validatePassword = (input) => {
     const validation = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
     if(input.match(validation)){
-        document.querySelector(".password").style.border = "1px solid #afb6c2";
-        document.querySelector("#passwordIcon").src="./assets/images/lock.svg";
+        changeBorder(document.querySelector(".password"),"1px solid #afb6c2")
+        changeSource(document.querySelector("#passwordIcon"),"./assets/images/lock.svg")
     } else {
         alert("The password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters")
-        document.querySelector(".password").style.border = "1px solid #afb6c2";
-        document.querySelector("#passwordIcon").src="./assets/images/lock.svg";
-        // inputPassword.focusin();
+        changeBorder(document.querySelector(".password"),"1px solid #afb6c2")
+        changeSource(document.querySelector("#passwordIcon"),"./assets/images/lock.svg")
     }
 }
 
